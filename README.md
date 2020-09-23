@@ -17,12 +17,12 @@ const parameters = cs.getParameters({files});
 const elem = document.createElement('div');
 elem.innerHTML = `
   <form action="https://codesandbox.io/api/v1/sandboxes/define" method="POST" target="_blank" class="hidden">
-    <input type="hidden" name="parameters" />
-    <input type="submit" />
+    <input type="hidden" name="parameters">
+    <input type="submit">
   </form>
 `;
 elem.querySelector('input[name=parameters]').value = parameters;
-window.frameElement.ownerDocument.body.appendChild(elem);
+document.body.appendChild(elem);
 elem.querySelector('form').submit();
 ```
 
